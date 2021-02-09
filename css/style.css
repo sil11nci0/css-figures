@@ -1,0 +1,419 @@
+body {
+  background: #2b2929;
+}
+.figures {
+  padding-top: 50px;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  background: rgb(82, 83, 80);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.figures__title {
+  padding-top: 30px;
+  color: rgb(233, 227, 227);
+  font: 50px 'Fredoka One', sans-serif;
+  text-align: center;
+}
+.figures__items {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 50px;
+  justify-content: center;
+}
+.figures__item:not(:last-child) {
+  margin: 0 30px 30px 0;
+}
+.figures__item:nth-child(16) {
+  width: 100px;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgb(224, 192, 50);
+}
+.parallelogram {
+  width: 130px;
+  height: 100px;
+  background: rgb(224, 192, 50);
+  transform: skew(15deg);
+}
+.trapezoid {
+  width: 80px;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 100px solid rgb(224, 192, 50);
+}
+.rhombus {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom-color: rgb(224, 192, 50);
+  position: relative;
+  top: -50px;
+  animation-name: circle;
+}
+.rhombus:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -50px;
+  top: 50px;
+  border: 50px solid transparent;
+  border-top-color: rgb(224, 192, 50);
+  animation-name: circle;
+}
+.container__triangle {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-bottom: 100px solid rgb(224, 192, 50);
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-top: 100px solid rgb(224, 192, 50);
+}
+.triangle-right {
+  border-left: 100px solid rgb(224, 192, 50);
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+.triangle-left {
+  border-right: 100px solid rgb(224, 192, 50);
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+
+.triangle-left-corner-top {
+  width: 0;
+  height: 0;
+  border-top: 100px solid rgb(224, 192, 50);
+  border-right: 100px solid transparent;
+}
+.triangle-right-corner-top {
+  width: 0;
+  height: 0;
+  border-top: 100px solid rgb(224, 192, 50);
+  border-left: 100px solid transparent;
+}
+.triangle-right-corner-bottom {
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid rgb(224, 192, 50);
+  border-right: 100px solid transparent;
+}
+.triangle-left-corner-bottom {
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid rgb(224, 192, 50);
+  border-left: 100px solid transparent;
+}
+
+.pentagon {
+  position: relative;
+  top: 50px;
+  width: 54px;
+  box-sizing: content-box;
+  border-width: 50px 18px 0;
+  border-style: solid;
+  border-color: rgb(224, 192, 50) transparent;
+}
+.pentagon:before {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -85px;
+  left: -18px;
+  border-width: 0 45px 35px;
+  border-style: solid;
+  border-color: transparent transparent rgb(224, 192, 50);
+}
+
+.star {
+  margin: 50px 0;
+  height: 0;
+  width: 0;
+  top: -5px;
+  position: relative;
+  border-right: 50px solid transparent;
+  border-bottom: 35px solid rgb(224, 192, 50);
+  border-left: 50px solid transparent;
+  transform: rotate(35deg);
+}
+.star:before,
+.star:after {
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+.star:before {
+  top: -26px;
+  left: -32px;
+  border-bottom: 40px solid rgb(224, 192, 50);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  transform: rotate(-35deg);
+}
+.star:after {
+  top: 2px;
+  left: -53px;
+  border-right: 50px solid transparent;
+  border-bottom: 35px solid rgb(224, 192, 50);
+  border-left: 50px solid transparent;
+  transform: rotate(-70deg);
+}
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  top: 24px;
+}
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: '';
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: rgb(224, 192, 50);
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.cross {
+  background: rgb(224, 192, 50);
+  height: 100px;
+  width: 20px;
+  position: relative;
+  left: 40px;
+}
+.cross:after {
+  content: '';
+  height: 20px;
+  width: 100px;
+  background: rgb(224, 192, 50);
+  position: absolute;
+  left: -40px;
+  top: 40px;
+}
+
+.triangle-rad {
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-top: 110px solid rgb(224, 192, 50);
+  border-radius: 50%;
+}
+
+.magnifier {
+  font-size: 170px; /* задает размер иконки */
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  border: 16px solid rgb(224, 192, 50);
+  position: relative;
+  border-radius: 50%;
+}
+.magnifier:before {
+  content: '';
+  width: 50px;
+  height: 14px;
+  position: absolute;
+  right: -38px;
+  bottom: -16px;
+  background: rgb(224, 192, 50);
+  transform: rotate(45deg);
+}
+
+.tape {
+  width: 0;
+  height: 30px;
+  border-width: 50px 30px 20px;
+  border-style: solid;
+  border-color: rgb(224, 192, 50) rgb(224, 192, 50) transparent;
+}
+
+.tulip {
+  height: 15px;
+  width: 60px;
+  background: linear-gradient(45deg, rgb(224, 192, 50) 50%, transparent 51%),
+    linear-gradient(315deg, rgb(224, 192, 50) 50%, transparent 51%);
+  background-size: 30px 30px;
+  border-bottom: 40px solid rgb(224, 192, 50);
+  border-bottom-left-radius: 60%;
+  border-bottom-right-radius: 60%;
+  position: relative;
+}
+.tulip:after {
+  content: '';
+  width: 10px;
+  height: 50px;
+  background: rgb(224, 192, 50);
+  position: absolute;
+  top: 50px;
+  right: 25px;
+}
+
+.petal {
+  width: 100px;
+  height: 100px;
+  background: rgb(224, 192, 50);
+  border-radius: 100% 0;
+}
+
+.cloud {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin: 32px;
+  background: rgb(236, 210, 94);
+  border-width: 4px;
+  border-style: solid;
+  border-color: rgb(224, 192, 50);
+  border-radius: 50% 50% 0 0;
+}
+.cloud:before,
+.cloud:after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  background: inherit;
+  border-width: 4px;
+  border-style: solid;
+  border-color: rgb(224, 192, 50);
+}
+.cloud:before {
+  left: 80%;
+  width: 60%;
+  height: 60%;
+  border-left: none;
+  border-radius: 50% 50% 50% 0;
+}
+.cloud:after {
+  right: 80%;
+  width: 80%;
+  height: 80%;
+  border-right: none;
+  border-radius: 50% 50% 0;
+}
+
+.infinity {
+  position: relative;
+  width: 212px;
+  height: 100px;
+  box-sizing: content-box;
+}
+.infinity:before,
+.infinity:after {
+  content: '';
+  box-sizing: content-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border: 20px solid rgb(224, 192, 50);
+  border-radius: 50px 50px 0 50px;
+  transform: rotate(-45deg);
+}
+.infinity:after {
+  left: auto;
+  right: 0;
+  border-radius: 50px 50px 50px 0;
+  transform: rotate(45deg);
+}
+
+.diamond {
+  border-style: solid;
+  border-color: transparent transparent rgb(224, 192, 50) transparent;
+  border-width: 0 25px 25px 25px;
+  height: 0;
+  width: 50px;
+  box-sizing: content-box;
+  position: relative;
+}
+.diamond:after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: rgb(224, 192, 50) transparent transparent transparent;
+  border-width: 70px 50px 0 50px;
+}
+
+.house {
+  height: 55px;
+  width: 100px;
+  margin: 35px 20px 0 0;
+  background: rgb(224, 192, 50);
+  position: relative;
+}
+.house:before {
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: -35px;
+  border-bottom: 35px solid rgb(224, 192, 50);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.petal_flower {
+  width: 40px;
+  height: 40px;
+  left: 40px;
+  border-radius: 100% 0;
+  background: rgb(224, 192, 50);
+  box-shadow: -48px 48px rgb(224, 192, 50);
+  position: relative;
+}
+.petal_flower:before,
+.petal_flower:after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  margin: 16px 48px;
+  border-radius: 0 100%;
+  background: rgb(224, 192, 50);
+  position: absolute;
+  left: -96px;
+  top: -16px;
+  box-shadow: 48px 48px rgb(224, 192, 50);
+  transform-origin: 44px 44px;
+}
+.petal_flower:before {
+  transform: rotate(-30deg);
+}
+.petal_flower:after {
+  transform: rotate(30deg);
+}
